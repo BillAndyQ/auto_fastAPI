@@ -1,0 +1,21 @@
+{   
+    "config" : {
+        "db" :{
+            "name" : "sqlite",
+            "key" : ""
+        },
+        "auth" : {
+            "key" : "CLAVE_SECRET"
+        }
+    },
+    "modulos" : {
+        "productos" : {
+            "routes" : "auto",
+            "model" : ["name:str","stock:int","descripcion:str","price:float"],
+            "completed": "False"
+        },
+        "categorias" : {
+            "routes" : "auto"
+        }
+    }
+}
