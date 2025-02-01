@@ -2,7 +2,7 @@
 from pydantic import BaseModel
 from typing import List
 
-class ProductosBase(BaseModel):
+class AlmacenesBase(BaseModel):
 
     name: str
     stock: int

@@ -20,7 +20,11 @@ def get_db():
 # Endpoint para crear un producto
 @router.post("/", response_model=Producto)
 def crear_producto(producto: ProductoCreate, db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)):
-    db_producto = ProductoModel(nombre=producto.nombre, descripcion=producto.descripcion, precio=producto.precio, stock=producto.stock)
+    db_producto = ProductoModel(
+        nombre=producto.nombre,
+        descripcion=producto.descripcion,
+        precio=producto.precio,
+        stock=producto.stock)
     db.add(db_producto)
     db.commit()
     db.refresh(db_producto)
@@ -37,7 +41,6 @@ def obtener_productos(db: Session = Depends(get_db), current_user: dict = Depend
             producto.precio = 0.0
         if producto.stock is None:
             producto.stock = 0
-
     return productos
 
 @router.get("/fields", response_model=List[Dict[str, str]])
