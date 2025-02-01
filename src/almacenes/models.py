@@ -4,8 +4,8 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-class Productos():
-    __tablename__ = 'productos'
+class Almacenes():
+    __tablename__ = 'almacenes'
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
     stock = Column(Integer)

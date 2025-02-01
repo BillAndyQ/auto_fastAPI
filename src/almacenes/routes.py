@@ -1,6 +1,6 @@
 
 from fastapi import APIRouter, Depends
-from .models import Productos
+from .models import Almacenes
 from src.connect_db import SessionLocal
 from .schemas import ProductoCreate, Producto
 from sqlalchemy.orm import Session
@@ -17,8 +17,8 @@ def get_db():
     finally:
         db.close()
 
-@router.get("/", response_model=list[Productos])
-def get_productos(db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)):
-    productos = db.query(Productos).all()
-    return productos
+@router.get("/", response_model=list[Almacenes])
+def get_almacenes(db: Session = Depends(get_db), current_user: dict = Depends(get_current_user)):
+    almacenes = db.query(Almacenes).all()
+    return almacenes
 

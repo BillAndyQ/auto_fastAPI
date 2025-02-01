@@ -16,6 +16,10 @@
         },
         "categorias" : {
             "routes" : "auto"
+        },
+        "almacenes" : {
+            "routes" : "auto",
+            "model" : ["name:str","stock:int","descripcion:str","price:float"]
         }
     }
 }
