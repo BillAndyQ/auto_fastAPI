@@ -6,5 +6,5 @@
 
 3. Ejecuta la migración de las tablas
 
-```bash
-py updateModels.py
+    ```bash
+    py updateModels.py
