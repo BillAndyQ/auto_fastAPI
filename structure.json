@@ -5,7 +5,12 @@
             "key" : ""
         },
         "auth" : {
-            "key" : "CLAVE_SECRET"
+            "key" : "CLAVE_SECRET",
+            "roles" : {
+                "admin" : {
+                    "routes" : "all"
+                }
+            }
         }
     },
     "modulos" : {

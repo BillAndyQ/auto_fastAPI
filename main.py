@@ -2,12 +2,14 @@ from fastapi import FastAPI
 from starlette.responses import RedirectResponse
 from src.products.routes import router as router_productos
 from src.productos.routes import router as router_productos_2
+from src.categorias.routes import router as router_categorias
 from src.auth.auth import app as router_auth
 from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 app.include_router(router_productos, prefix="/productos")
 app.include_router(router_productos_2, prefix="/productos_2")
+app.include_router(router_categorias, prefix="/categorias")
 app.include_router(router_auth)
 
 # Configuración de orígenes permitidos

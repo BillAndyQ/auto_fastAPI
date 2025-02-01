@@ -8,3 +8,4 @@ class ProductosBase(BaseModel):
     stock: int
     descripcion: str
     price: float
+    categoria_id: int
