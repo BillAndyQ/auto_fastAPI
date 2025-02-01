@@ -5,6 +5,13 @@
 2. Ejecuta auto_structure.ipynb
 
 3. Ejecuta la migración de las tablas
-
     ```bash
     py updateModels.py
+
+4. Instala las dependencias
+    ```bash
+    pip install -r requirements.txt
+
+5. Instala las dependencias
+    ```bash
+    uvicorn main:app --reload
