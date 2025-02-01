@@ -1,10 +1,8 @@
 
 from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.ext.declarative import declarative_base
+from src.database import Base
 
-Base = declarative_base()
-
-class Productos():
+class Productos(Base):
     __tablename__ = 'productos'
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)

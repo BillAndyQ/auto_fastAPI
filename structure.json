@@ -15,7 +15,8 @@
             "completed": "False"
         },
         "categorias" : {
-            "routes" : "auto"
+            "routes" : "auto",
+            "model" : ["name:str"]
         },
         "almacenes" : {
             "routes" : "auto",

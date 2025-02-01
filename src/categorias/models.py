@@ -1,9 +1,8 @@
 
 from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.ext.declarative import declarative_base
+from src.database import Base
 
-Base = declarative_base()
-
-class Categorias():
+class Categorias(Base):
     __tablename__ = 'categorias'
     id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
